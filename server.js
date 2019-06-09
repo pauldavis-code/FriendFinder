@@ -1,7 +1,7 @@
 const express = require('express');
-const path = require('path');
 
 const route = require('./app/routing/htmlRoutes')
+const apiRoute = require('./app/routing/apiRoute')
 
 var app = express();
 var PORT = process.env.PORT || 8000;
@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 route(app, PORT)
+apiRoute(app)
 
 app.listen(PORT, function() {
   console.log('connected to port ' + PORT)
