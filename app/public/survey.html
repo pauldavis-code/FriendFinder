@@ -1,32 +1,300 @@
-<!DOCTYPE HTML> 
-<html lang="en"> 
+<!DOCTYPE HTML>
+<html lang="en">
 
-<head> 
-    <!-- meta tags -->
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- custom css -->
-    <link rel="stylesheet" href="assets/CSS/reset.css" type="text/css">
-    <link rel="stylesheet" href="assets/CSS/style.css" type="text/css">
+<head>
+  <!-- meta tags -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- custom css -->
+  <!-- <link rel="stylesheet" href="assets/CSS/reset.css" type="text/css">
+    <link rel="stylesheet" href="assets/CSS/style.css" type="text/css"> -->
 
-</head> 
+</head>
 
-<body> 
+<body>
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-1"></div>
+
+      <div class="col-10">
+        <h2>Friend Survey!</h2>
+        <hr>
+        <div class="form-group">
+          <label for="">Name</label>
+          <input id="nameInput" type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">required</small>
+        </div>
+        <div class="form-group">
+          <label for="">Link to a photo of you</label>
+          <input id="photoInput" type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">required</small>
+        </div>
+        <hr>
+        <div class="">
+          Question 1<br>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="0">
+            <label class="surveyValue btn btn-secondary active">
+              <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
+                data-clicked="false"> 1
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="2" autocomplete="off"> 2
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="3" autocomplete="off"> 3
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="4" autocomplete="off"> 4
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="5" autocomplete="off"> 5
+            </label>
+          </div>
+        </div>
+        <div class="">
+          Question 2<br>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="1">
+            <label class="surveyValue btn btn-secondary active">
+              <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
+                data-clicked="false"> 1
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="2" autocomplete="off"> 2
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="3" autocomplete="off"> 3
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="4" autocomplete="off"> 4
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="5" autocomplete="off"> 5
+            </label>
+          </div>
+        </div>
+        <div class="">
+          Question 3<br>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="2">
+            <label class="surveyValue btn btn-secondary active">
+              <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
+                data-clicked="false"> 1
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="2" autocomplete="off"> 2
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="3" autocomplete="off"> 3
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="4" autocomplete="off"> 4
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="5" autocomplete="off"> 5
+            </label>
+          </div>
+        </div>
+        <div class="">
+          Question 4<br>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="3">
+            <label class="surveyValue btn btn-secondary active">
+              <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
+                data-clicked="false"> 1
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="2" autocomplete="off"> 2
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="3" autocomplete="off"> 3
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="4" autocomplete="off"> 4
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="5" autocomplete="off"> 5
+            </label>
+          </div>
+        </div>
+        <div class="">
+          Question 5<br>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="4">
+            <label class="surveyValue btn btn-secondary active">
+              <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
+                data-clicked="false"> 1
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="2" autocomplete="off"> 2
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="3" autocomplete="off"> 3
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="4" autocomplete="off"> 4
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="5" autocomplete="off"> 5
+            </label>
+          </div>
+        </div>
+        <div class="">
+          Question 6<br>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="5">
+            <label class="surveyValue btn btn-secondary active">
+              <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
+                data-clicked="false"> 1
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="2" autocomplete="off"> 2
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="3" autocomplete="off"> 3
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="4" autocomplete="off"> 4
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="5" autocomplete="off"> 5
+            </label>
+          </div>
+        </div>
+        <div class="">
+          Question 7<br>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="6">
+            <label class="surveyValue btn btn-secondary active">
+              <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
+                data-clicked="false"> 1
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="2" autocomplete="off"> 2
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="3" autocomplete="off"> 3
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="4" autocomplete="off"> 4
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="5" autocomplete="off"> 5
+            </label>
+          </div>
+        </div>
+        <div class="">
+          Question 8<br>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="7">
+            <label class="surveyValue btn btn-secondary active">
+              <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
+                data-clicked="false"> 1
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="2" autocomplete="off"> 2
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="3" autocomplete="off"> 3
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="4" autocomplete="off"> 4
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="5" autocomplete="off"> 5
+            </label>
+          </div>
+        </div>
+        <div class="">
+          Question 9<br>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="8">
+            <label class="surveyValue btn btn-secondary active">
+              <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
+                data-clicked="false"> 1
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="2" autocomplete="off"> 2
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="3" autocomplete="off"> 3
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="4" autocomplete="off"> 4
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="5" autocomplete="off"> 5
+            </label>
+          </div>
+        </div>
+        <div class="">
+          Question 10<br>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="9">
+            <label class="surveyValue btn btn-secondary active">
+              <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
+                data-clicked="false"> 1
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="2" autocomplete="off"> 2
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="3" autocomplete="off"> 3
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="4" autocomplete="off"> 4
+            </label>
+            <label class="surveyValue btn btn-secondary">
+              <input class="selection" type="radio" name="options" data-value="5" autocomplete="off"> 5
+            </label>
+          </div>
+        </div>
+        <button id="submitSurvey" type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+      <div class="col-1"></div>
+
+    </div>
+  </div>
+
+  <!-- bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <!-- logic -->
+  <script type="text/javascript"></script>
+  <script>
+    var surveySelections = []
+
+    //adding values to memory
+    $('.surveyValue').on('click', function() {
+      var value = $(this).children('.selection').attr('data-value')
+      var question = $(this).parent('.btn-group').attr('data-question')
+      surveySelections[question] = value
+    })
+
+    $('#submitSurvey').on('click', function(event) {
+      event.preventDefault()
+      // if (surveySelections.length === 10) {
+        var newSurvey = {
+          name: $('#nameInput').val().trim(),
+          photo: $('#photoInput').val().trim(),
+          scores: surveySelections
+        }
+        console.log(newSurvey)
+        $.ajax('/api/friends', {
+          type: "POST",
+          data: newSurvey
+        }).then(function() {
+
+        })
+      // }
+    })
+  </script>
 
 
-<!-- bootstrap scripts -->
-<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!-- logic -->
-<script src="assets/javascript/logic.js"></script>
-<script type="text/javascript"></script>
 
-</body> 
+
+</body>
 
 </html>
