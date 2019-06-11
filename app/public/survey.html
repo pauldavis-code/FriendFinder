@@ -20,7 +20,7 @@
 
       <div class="col-1"></div>
 
-      <div class="col-10">
+      <div class="col-10 mt-2">
         <h2>Friend Survey!</h2>
         <hr>
         <div class="form-group">
@@ -36,7 +36,7 @@
         </div>
         <hr>
         <div class="q1">
-          Question 1<br>
+          Question 1: You're an early riser<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="0">
             <label class="surveyValue btn btn-secondary active">
               <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
@@ -57,7 +57,7 @@
           </div>
         </div>
         <div class="q2">
-          Question 2<br>
+          Question 2: You require no motivation to better yourself<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="1">
             <label class="surveyValue btn btn-secondary active">
               <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
@@ -78,7 +78,7 @@
           </div>
         </div>
         <div class="q3">
-          Question 3<br>
+          Question 3: You like to code<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="2">
             <label class="surveyValue btn btn-secondary active">
               <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
@@ -99,7 +99,7 @@
           </div>
         </div>
         <div class="q4">
-          Question 4<br>
+          Question 4: You'd rather be outdoors than indoors<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="3">
             <label class="surveyValue btn btn-secondary active">
               <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
@@ -120,7 +120,7 @@
           </div>
         </div>
         <div class="q5">
-          Question 5<br>
+          Question 5: You're easily irritable<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="4">
             <label class="surveyValue btn btn-secondary active">
               <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
@@ -141,7 +141,7 @@
           </div>
         </div>
         <div class="q6">
-          Question 6<br>
+          Question 6: You can do magic tricks<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="5">
             <label class="surveyValue btn btn-secondary active">
               <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
@@ -162,7 +162,7 @@
           </div>
         </div>
         <div class="q7">
-          Question 7<br>
+          Question 7: You'd rather be eating than anything else<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="6">
             <label class="surveyValue btn btn-secondary active">
               <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
@@ -183,7 +183,7 @@
           </div>
         </div>
         <div class="q8">
-          Question 8<br>
+          Question 8: You're a self-starter<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="7">
             <label class="surveyValue btn btn-secondary active">
               <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
@@ -204,7 +204,7 @@
           </div>
         </div>
         <div class="q9">
-          Question 9<br>
+          Question 9: You can't stay off your cellular phone<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="8">
             <label class="surveyValue btn btn-secondary active">
               <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
@@ -225,7 +225,7 @@
           </div>
         </div>
         <div class="q10">
-          Question 10<br>
+          Question 10: You're enjoying this quiz<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="9">
             <label class="surveyValue btn btn-secondary active">
               <input class="selection" type="radio" name="options" data-value="1" autocomplete="off"
@@ -245,23 +245,33 @@
             </label>
           </div>
         </div>
-        <button id="submitSurvey" type="submit" class="btn btn-primary">Submit</button>
+        <button id="submitSurvey" type="submit" class="mt-2 mb-4 btn btn-primary">Submit</button>
+        <hr>
+        <div class="mt-1 mb-2">
+          <a href="/api/friends">api</a> | <a href="https://github.com/pauldavis-code/FriendFinder">github</a>
+        </div>
       </div>
 
       <div class="col-1"></div>
+
+
+
 
       <!-- modal -->
       <div id="resultSubmit" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
+              <h5 class="modal-title">Your New Best Friend!</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>Modal body text goes here.</p>
+              <h6 style="font-size: 35px; text-decoration: underline;" id="matchName" class="mb-2"></h6>
+              <div style="text-align: center">
+                <img id="matchImg" class="img-responsive" style="max-height: 250px;" src="">
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -289,31 +299,37 @@
     var surveySelections = []
 
     //adding values to memory
-    $('.surveyValue').on('click', function() {
+    $('.surveyValue').on('click', function () {
       var value = $(this).children('.selection').attr('data-value')
       var question = $(this).parent('.btn-group').attr('data-question')
       surveySelections[question] = value
     })
 
-    $('#submitSurvey').on('click', function(event) {
+    $('#submitSurvey').on('click', function (event) {
       event.preventDefault()
-      //modal
-      $('#resultSubmit').modal('show');
+      if (surveySelections.length === 10 && $('#nameInput').val() != "" && $('#photoInput').val() != "") {
+        //modal
+        $('#resultSubmit').modal('show');
+        var newSurvey = {
+          name: $('#nameInput').val().trim(),
+          photo: $('#photoInput').val().trim(),
+          scores: surveySelections
+        }
 
-      // if (surveySelections.length === 10) {
-      var newSurvey = {
-        name: $('#nameInput').val().trim(),
-        photo: $('#photoInput').val().trim(),
-        scores: surveySelections
+        $.ajax('/api/friends', {
+          type: "POST",
+          data: newSurvey
+        }).then(function (match) {
+          console.log(match.name, match.photo)
+          $('#matchName').text(match.name)
+          $('#matchImg').attr('src', match.photo)
+        })
+
+        $.ajax('/api/friends')
+      } else {
+        alert('Please fill all fields')
       }
-      console.log(newSurvey)
-      $.ajax('/api/friends', {
-        type: "POST",
-        data: newSurvey
-      }).then(function () {
 
-      })
-      // }
     })
   </script>
 
