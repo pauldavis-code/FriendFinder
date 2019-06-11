@@ -30,11 +30,12 @@
         </div>
         <div class="form-group">
           <label for="">Link to a photo of you</label>
-          <input id="photoInput" type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+          <input id="photoInput" type="text" class="form-control" name="" id="" aria-describedby="helpId"
+            placeholder="">
           <small id="helpId" class="form-text text-muted">required</small>
         </div>
         <hr>
-        <div class="">
+        <div class="q1">
           Question 1<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="0">
             <label class="surveyValue btn btn-secondary active">
@@ -55,7 +56,7 @@
             </label>
           </div>
         </div>
-        <div class="">
+        <div class="q2">
           Question 2<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="1">
             <label class="surveyValue btn btn-secondary active">
@@ -76,7 +77,7 @@
             </label>
           </div>
         </div>
-        <div class="">
+        <div class="q3">
           Question 3<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="2">
             <label class="surveyValue btn btn-secondary active">
@@ -97,7 +98,7 @@
             </label>
           </div>
         </div>
-        <div class="">
+        <div class="q4">
           Question 4<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="3">
             <label class="surveyValue btn btn-secondary active">
@@ -118,7 +119,7 @@
             </label>
           </div>
         </div>
-        <div class="">
+        <div class="q5">
           Question 5<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="4">
             <label class="surveyValue btn btn-secondary active">
@@ -139,7 +140,7 @@
             </label>
           </div>
         </div>
-        <div class="">
+        <div class="q6">
           Question 6<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="5">
             <label class="surveyValue btn btn-secondary active">
@@ -160,7 +161,7 @@
             </label>
           </div>
         </div>
-        <div class="">
+        <div class="q7">
           Question 7<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="6">
             <label class="surveyValue btn btn-secondary active">
@@ -181,7 +182,7 @@
             </label>
           </div>
         </div>
-        <div class="">
+        <div class="q8">
           Question 8<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="7">
             <label class="surveyValue btn btn-secondary active">
@@ -202,7 +203,7 @@
             </label>
           </div>
         </div>
-        <div class="">
+        <div class="q9">
           Question 9<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="8">
             <label class="surveyValue btn btn-secondary active">
@@ -223,7 +224,7 @@
             </label>
           </div>
         </div>
-        <div class="">
+        <div class="q10">
           Question 10<br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons" data-question="9">
             <label class="surveyValue btn btn-secondary active">
@@ -248,6 +249,27 @@
       </div>
 
       <div class="col-1"></div>
+
+      <!-- modal -->
+      <div id="resultSubmit" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -275,19 +297,22 @@
 
     $('#submitSurvey').on('click', function(event) {
       event.preventDefault()
-      // if (surveySelections.length === 10) {
-        var newSurvey = {
-          name: $('#nameInput').val().trim(),
-          photo: $('#photoInput').val().trim(),
-          scores: surveySelections
-        }
-        console.log(newSurvey)
-        $.ajax('/api/friends', {
-          type: "POST",
-          data: newSurvey
-        }).then(function() {
+      //modal
+      $('#resultSubmit').modal('show');
 
-        })
+      // if (surveySelections.length === 10) {
+      var newSurvey = {
+        name: $('#nameInput').val().trim(),
+        photo: $('#photoInput').val().trim(),
+        scores: surveySelections
+      }
+      console.log(newSurvey)
+      $.ajax('/api/friends', {
+        type: "POST",
+        data: newSurvey
+      }).then(function () {
+
+      })
       // }
     })
   </script>
